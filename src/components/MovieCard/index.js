@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { fetchMovieInfo } from '../../thunks/fetchMovieInfo';
-import { updateFavorites } from '../../actions/index.js';
+import { updateFavorites, selectedMovie } from '../../actions/index.js';
 import { key } from '../../apiKey';
 import { connect } from 'react-redux';
 import active from '../../images/active.svg';
@@ -19,8 +19,10 @@ export class MovieCard extends Component {
   
   showMoreInfo = () => {
     const { card } = this.props;
-    const url = `https://api.themoviedb.org/3/movie/${card.movie_id}?api_key=${key}&language=en-US`;
-    this.props.fetchInfo(url);
+    this.props.showMovieInfo(card);
+    // Original API call, converted to just use already fetched data for GJ pages
+    // const url = `https://api.themoviedb.org/3/movie/${card.movie_id}?api_key=${key}&language=en-US`;
+    // this.props.fetchInfo(url);
   }
 
   toggleFavorite = () => {
@@ -85,6 +87,7 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
+  showMovieInfo: (movie) => dispatch(selectedMovie(movie)),
   fetchInfo: (url) => dispatch(fetchMovieInfo(url)),
   updateFavorites: (movie) => dispatch(updateFavorites(movie))
 })

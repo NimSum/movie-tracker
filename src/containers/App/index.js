@@ -13,7 +13,8 @@ import MoviePage from '../../containers/MoviePage'
 
 export class App extends Component {
   async componentDidMount() {
-    const nowShowingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`;
+    // Use gist of copied data in place of api request with key
+    const nowShowingUrl = 'https://gist.githubusercontent.com/NimSum/10413ecf56ebb80fd5cc1c82ba3392f5/raw/6fba221c12d065f673cc5b066621d0c4984edfa1/mock-movie-tracker-api';
     try {
       const movies = await fetchAnything(nowShowingUrl);
       const result = await cleanMovies(movies.results)
