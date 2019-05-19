@@ -14,7 +14,7 @@ export class LoginPage extends Component {
       email: '',
       confirmPassword: '',
       userName: '',
-      error: false,
+      error: true,
       passwordMismatch: false
     }
   }
@@ -50,16 +50,16 @@ export class LoginPage extends Component {
   }
 
   handleChange = ({target}) => {
-    this.setState({ [target.name]: target.value, passwordMismatch: false, error: false })
+    this.setState({ [target.name]: target.value, passwordMismatch: false, error: true })
   } 
   
   handleSubmit = (e) => {
     e.preventDefault();
     const { email, confirmPassword, password, userName } = this.state;
     if (this.props.formType === 'login') {
-      (email.length && password.length) && this.submitUserData();
+      // (email.length && password.length) && this.submitUserData();
     } else {
-      (email.length && password.length && confirmPassword === password && userName.length) && this.submitUserData();
+      // (email.length && password.length && confirmPassword === password && userName.length) && this.submitUserData();
     }
     const passwordMismatch = this.props.formType === 'signup' && password !== confirmPassword;
     this.setState({ passwordMismatch })
@@ -159,9 +159,10 @@ export class LoginPage extends Component {
         onClick={() => changeForm('signup')}>
         Create Account
       </span>)
-    const errorText = formType === 'login'
-      ? <p>Email and password do not match an account, check login info or {createActLink}</p>
-      : 'Email has already been used.'
+    const errorText = 'This functionality is disabled, the accounts API is only accessible through local server :('
+      // Original message, converted to message gh pages user
+      // ? <p>Email and password do not match an account, check login info or {createActLink}</p>
+      // : 'Email has already been used.'
     return (
       <main className='login-page'>
         <h2 className='form-heading'>{ formType === 'login' ? 'LOGIN' : 'SIGN-UP' }</h2> 
