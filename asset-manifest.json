@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/movie-tracker/static/css/main.4e4371d4.chunk.css",
+    "main.js": "/movie-tracker/static/js/main.fda0b27a.chunk.js",
+    "main.js.map": "/movie-tracker/static/js/main.fda0b27a.chunk.js.map",
+    "runtime~main.js": "/movie-tracker/static/js/runtime~main.e9d78e93.js",
+    "runtime~main.js.map": "/movie-tracker/static/js/runtime~main.e9d78e93.js.map",
+    "static/js/2.e55cf14f.chunk.js": "/movie-tracker/static/js/2.e55cf14f.chunk.js",
+    "static/js/2.e55cf14f.chunk.js.map": "/movie-tracker/static/js/2.e55cf14f.chunk.js.map",
+    "index.html": "/movie-tracker/index.html",
+    "precache-manifest.446131168a5aae9ee33b416388691d59.js": "/movie-tracker/precache-manifest.446131168a5aae9ee33b416388691d59.js",
+    "service-worker.js": "/movie-tracker/service-worker.js",
+    "static/css/main.4e4371d4.chunk.css.map": "/movie-tracker/static/css/main.4e4371d4.chunk.css.map",
+    "static/media/active.svg": "/movie-tracker/static/media/active.4bc306eb.svg",
+    "static/media/film.png": "/movie-tracker/static/media/film.a8ba11ab.png",
+    "static/media/hamburger.svg": "/movie-tracker/static/media/hamburger.9e0d17aa.svg",
+    "static/media/inactive.svg": "/movie-tracker/static/media/inactive.5cff0a49.svg"
+  }
+}
