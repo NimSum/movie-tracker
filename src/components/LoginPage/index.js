@@ -50,7 +50,7 @@ export class LoginPage extends Component {
   }
 
   handleChange = ({target}) => {
-    this.setState({ [target.name]: target.value, passwordMismatch: false })
+    this.setState({ [target.name]: target.value, passwordMismatch: false, error: false })
   } 
   
   handleSubmit = (e) => {
