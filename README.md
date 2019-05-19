@@ -1,6 +1,6 @@
 # Movie Tracker
 Users can browse movies that are in theaters. Users can also sign-up and login to favorite movies they are interested in.
-
+#### Live Page(login/signup functionality disabled): https://nimsum.github.io/movie-tracker/
 ## Instructions
 - clone down this repo
 - run npm install
