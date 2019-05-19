@@ -6,15 +6,15 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <App /> 
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root'));
